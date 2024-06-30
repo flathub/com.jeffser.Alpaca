@@ -98,7 +98,14 @@
                     "sha256": "4d19be355842a6297c93ab5ada139fe396126736bf3c3882a879dc245dffe3af",
                     "only-arches": [
                         "x86_64"
-                    ]
+                    ],
+                    "x-checker-data": {
+                        "type": "json",
+                        "url": "https://api.github.com/repos/ollama/ollama/releases/latest",
+                        "timestamp-query": ".published_at",
+                        "version-query": ".tag_name | sub(\"^v\"; \"\")",
+                        "url-query": ".assets[] | select(.name==\"ollama-linux-amd64\") | .browser_download_url"
+                    }
                 },
                 {
                     "type": "file",
@@ -106,7 +113,14 @@
                     "sha256": "60ec2d36928c11d6c6d84fe91451308a46aafaedbdba44664e5a6080009ce097",
                     "only-arches": [
                         "aarch64"
-                    ]
+                    ],
+                    "x-checker-data": {
+                        "type": "json",
+                        "url": "https://api.github.com/repos/ollama/ollama/releases/latest",
+                        "timestamp-query": ".published_at",
+                        "version-query": ".tag_name | sub(\"^v\"; \"\")",
+                        "url-query": ".assets[] | select(.name==\"ollama-linux-arm64\") | .browser_download_url"
+                    }
                 }
             ]
         },
