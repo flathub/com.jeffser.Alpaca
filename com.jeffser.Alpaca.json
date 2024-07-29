@@ -122,16 +122,16 @@
 	            "sources": [
 	            	{
 	            		"type": "file",
-	            		"url": "https://github.com/ollama/ollama/releases/download/v0.2.8/ollama-linux-amd64",
-	            		"sha256": "4d19be355842a6297c93ab5ada139fe396126736bf3c3882a879dc245dffe3af",
+	            		"url": "https://github.com/ollama/ollama/releases/download/v0.3.0/ollama-linux-amd64",
+            			"sha256": "b8817c34882c7ac138565836ac1995a2c61261a79315a13a0aebbfe5435da855",
 			    	"only-arches": [
 			    		"x86_64"
 			    	]
 	            	},
 	            	{
 	            		"type": "file",
-	            		"url": "https://github.com/ollama/ollama/releases/download/v0.2.8/ollama-linux-arm64",
-	            		"sha256": "60ec2d36928c11d6c6d84fe91451308a46aafaedbdba44664e5a6080009ce097",
+	            		"url": "https://github.com/ollama/ollama/releases/download/v0.3.0/ollama-linux-arm64",
+            			"sha256": "64be908749212052146f1008dd3867359c776ac1766e8d86291886f53d294d4d",
 			    	"only-arches": [
 			    		"aarch64"
 			    	]
@@ -146,7 +146,7 @@
 				{
 					"type": "git",
 					"url": "https://github.com/Jeffser/Alpaca.git",
-					"tag": "1.0.1"
+					"tag": "1.0.2"
 				}
 			]
 		}
