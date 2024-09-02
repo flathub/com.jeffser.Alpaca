@@ -22,6 +22,16 @@
 		"*.la",
 		"*.a"
 	],
+        "add-extensions": {
+    	    "com.jeffser.Alpaca.Plugins": {
+    		    "version": "1.0",
+    		    "add-ld-path": "/lib/ollama",
+    		    "directory": "/lib/ollama",
+    		    "no-autodownload": true,
+    		    "autodelete": true,
+    		    "subdirectories": true
+    	    }
+        },
 	"modules": [
 		{
 			"name": "python3-requests",
