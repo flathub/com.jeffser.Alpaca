@@ -1,7 +1,7 @@
 {
 	"id": "com.jeffser.Alpaca",
 	"runtime": "org.gnome.Platform",
-	"runtime-version": "46",
+	"runtime-version": "47",
 	"sdk": "org.gnome.Sdk",
 	"command": "alpaca",
 	"finish-args": [
@@ -174,7 +174,7 @@
 				{
 					"type": "git",
 					"url": "https://github.com/Jeffser/Alpaca.git",
-					"tag": "2.0.2"
+					"tag": "2.0.3"
 				}
 			]
 		}
