@@ -178,6 +178,25 @@
 			}
 		    ]
 		},
+		{
+		    "name": "python3-odfpy",
+		    "buildsystem": "simple",
+		    "build-commands": [
+			"pip3 install --verbose --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"odfpy\" --no-build-isolation"
+		    ],
+		    "sources": [
+			{
+			    "type": "file",
+			    "url": "https://files.pythonhosted.org/packages/07/6c/aa3f2f849e01cb6a001cd8554a88d4c77c5c1a31c95bdf1cf9301e6d9ef4/defusedxml-0.7.1-py2.py3-none-any.whl",
+			    "sha256": "a352e7e428770286cc899e2542b6cdaedb2b4953ff269a210103ec58f6198a61"
+			},
+			{
+			    "type": "file",
+			    "url": "https://files.pythonhosted.org/packages/97/73/8ade73f6749177003f7ce3304f524774adda96e6aaab30ea79fd8fda7934/odfpy-1.4.1.tar.gz",
+			    "sha256": "db766a6e59c5103212f3cc92ec8dd50a0f3a02790233ed0b52148b70d3c438ec"
+			}
+		    ]
+		},
 	        {
 	            "name": "ollama",
 	            "buildsystem": "simple",
@@ -188,16 +207,16 @@
 	            "sources": [
 	            	{
 	            		"type": "archive",
-	            		"url": "https://github.com/ollama/ollama/releases/download/v0.4.2/ollama-linux-amd64.tgz",
-	            		"sha256": "485b1b223571828a46532d55c118ea0c686af6acfb83876a9579ec1790d5cb33",
+	            		"url": "https://github.com/ollama/ollama/releases/download/v0.5.2/ollama-linux-amd64.tgz",
+	            		"sha256": "ae405953027df87f067ac1942ed46aac21f6269a295217ce13e72851884c255a",
 			    	"only-arches": [
 			    		"x86_64"
 			    	]
 	            	},
 	            	{
 	            		"type": "archive",
-	            		"url": "https://github.com/ollama/ollama/releases/download/v0.4.2/ollama-linux-arm64.tgz",
-	            		"sha256": "52e0b645de03b81a9efebc303a23c61812c5f61e4b8b390c1a142a8ecd4783a4",
+	            		"url": "https://github.com/ollama/ollama/releases/download/v0.5.2/ollama-linux-arm64.tgz",
+	            		"sha256": "974714ce330a1268592773395e74101b9b2d88f300e2ecbae4119da495c4f5a9",
 			    	"only-arches": [
 			    		"aarch64"
 			    	]
@@ -240,7 +259,7 @@
 				{
 					"type": "git",
 					"url": "https://github.com/Jeffser/Alpaca.git",
-					"tag": "2.9.0"
+					"tag": "3.0.0"
 				}
 			]
 		}
