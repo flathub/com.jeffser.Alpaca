@@ -98,20 +98,6 @@
 		    ]
 		},
 		{
-		    "name": "python3-pytube",
-		    "buildsystem": "simple",
-		    "build-commands": [
-			"pip3 install --verbose --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"pytube\" --no-build-isolation"
-		    ],
-		    "sources": [
-			{
-			    "type": "file",
-			    "url": "https://files.pythonhosted.org/packages/51/64/bcf8632ed2b7a36bbf84a0544885ffa1d0b4bcf25cc0903dba66ec5fdad9/pytube-15.0.0-py3-none-any.whl",
-			    "sha256": "07b9904749e213485780d7eb606e5e5b8e4341aa4dccf699160876da00e12d78"
-			}
-		    ]
-		},
-		{
 		    "name": "python3-youtube-transcript-api",
 		    "buildsystem": "simple",
 		    "build-commands": [
@@ -197,6 +183,20 @@
 			}
 		    ]
 		},
+		{
+		    "name": "python3-pyicu",
+		    "buildsystem": "simple",
+		    "build-commands": [
+			"pip3 install --verbose --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"pyicu\" --no-build-isolation"
+		    ],
+		    "sources": [
+		    	{
+		    		"type": "file",
+		    		"url": "https://files.pythonhosted.org/packages/52/21/4e9b0a3ace3027fc63107fa2b5d6e66e321e104da071d787856962fbad52/PyICU-2.14.tar.gz",
+		    		"sha256": "acc7eb92bd5c554ed577249c6978450a4feda0aa6f01470152b3a7b382a02132"
+		    	}
+		    ]
+		},
 	        {
 	            "name": "ollama",
 	            "buildsystem": "simple",
@@ -207,16 +207,16 @@
 	            "sources": [
 	            	{
 	            		"type": "archive",
-	            		"url": "https://github.com/ollama/ollama/releases/download/v0.5.2/ollama-linux-amd64.tgz",
-	            		"sha256": "ae405953027df87f067ac1942ed46aac21f6269a295217ce13e72851884c255a",
+	            		"url": "https://github.com/ollama/ollama/releases/download/v0.5.4/ollama-linux-amd64.tgz",
+	            		"sha256": "5f44dc7f21c4f0050c4da6649bf1501707e782b57a3f5e899e4fd0e2ffc183cb",
 			    	"only-arches": [
 			    		"x86_64"
 			    	]
 	            	},
 	            	{
 	            		"type": "archive",
-	            		"url": "https://github.com/ollama/ollama/releases/download/v0.5.2/ollama-linux-arm64.tgz",
-	            		"sha256": "974714ce330a1268592773395e74101b9b2d88f300e2ecbae4119da495c4f5a9",
+	            		"url": "https://github.com/ollama/ollama/releases/download/v0.5.4/ollama-linux-arm64.tgz",
+	            		"sha256": "7ff1f8b2c08f5172b8e4646abdbdc3b6947f20ca7f0e9060bf07064241420d45",
 			    	"only-arches": [
 			    		"aarch64"
 			    	]
@@ -259,7 +259,7 @@
 				{
 					"type": "git",
 					"url": "https://github.com/Jeffser/Alpaca.git",
-					"tag": "3.0.1"
+					"tag": "3.1.0"
 				}
 			]
 		}
