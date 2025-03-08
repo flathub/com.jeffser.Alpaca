@@ -34,6 +34,9 @@
 			"subdirectories": true
 		}
 	},
+	"cleanup-commands": [
+		"mkdir ${FLATPAK_DEST}/plugins"
+	],
 	"modules": [
 		{
 			"name": "python3-requests",
