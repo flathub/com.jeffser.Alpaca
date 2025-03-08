@@ -11,7 +11,8 @@
 		"--device=all",
 		"--socket=wayland",
 		"--filesystem=/sys/module/amdgpu:ro",
-		"--env=LD_LIBRARY_PATH=/app/lib:/usr/lib/x86_64-linux-gnu/GL/default/lib:/usr/lib/x86_64-linux-gnu/openh264/extra:/usr/lib/x86_64-linux-gnu/openh264/extra:/usr/lib/sdk/llvm15/lib:/usr/lib/x86_64-linux-gnu/GL/default/lib:/usr/lib/ollama:/app/plugins/AMD/lib/ollama"
+		"--env=LD_LIBRARY_PATH=/app/lib:/usr/lib/x86_64-linux-gnu/GL/default/lib:/usr/lib/x86_64-linux-gnu/openh264/extra:/usr/lib/sdk/llvm15/lib:/usr/lib/ollama:/app/plugins/AMD/lib/ollama:/app/plugins/AMD/lib/ollama/rocm:/app/plugins/AMD/lib/ollama/rocm/rocblas/library/",
+        	"--env=PATH=/app/bin:/app/plugins/Ollama/bin:/usr/bin"
 	],
 	"cleanup": [
 		"/include",
@@ -26,7 +27,7 @@
 	],
 	"add-extensions": {
 		"com.jeffser.Alpaca.Plugins": {
-			"add-ld-path": "/app/plugins/AMD/lib/ollama",
+			"add-ld-path": "/app/plugins/AMD/lib/ollama:/app/plugins/Ollama/lib/ollama",
 			"directory": "plugins",
 			"no-autodownload": true,
 			"autodelete": true,
@@ -453,50 +454,6 @@
 			]
 		},
 		{
-			"name": "ollama",
-			"buildsystem": "simple",
-			"build-commands": [
-				"tar -xvf ollama.tgz -C ${FLATPAK_DEST}",
-				"mkdir ${FLATPAK_DEST}/plugins"
-			],
-			"sources": [
-				{
-					"type": "file",
-					"url": "https://github.com/ollama/ollama/releases/download/v0.5.12/ollama-linux-amd64.tgz",
-					"sha256": "3a0efab98585b37337485e8d22ebe769d82ec54499275c51fa6c98e0ad7fe573",
-					"only-arches": [
-						"x86_64"
-					],
-					"dest-filename": "ollama.tgz"
-				},
-				{
-					"type": "file",
-					"url": "https://github.com/ollama/ollama/releases/download/v0.5.12/ollama-linux-arm64.tgz",
-					"sha256": "7043418b2cb7b605d63d7095dc8504a7100c9c39788c23ffa9ccdbb3c82cc9fe",
-					"only-arches": [
-						"aarch64"
-					],
-					"dest-filename": "ollama.tgz"
-				}
-			]
-		},
-		{
-			"name": "libnuma",
-			"buildsystem": "autotools",
-			"build-commands": [
-				"autoreconf -i",
-				"make",
-				"make install"
-			],
-			"sources": [
-				{
-					"type": "archive",
-					"url": "https://github.com/numactl/numactl/releases/download/v2.0.18/numactl-2.0.18.tar.gz",
-					"sha256": "b4fc0956317680579992d7815bc43d0538960dc73aa1dd8ca7e3806e30bc1274"
-				}
-			]
-		},
-		{
 			"name": "vte",
 			"buildsystem": "meson",
 			"config-opts": [
@@ -518,7 +475,7 @@
 				{
 					"type": "git",
 					"url": "https://github.com/Jeffser/Alpaca.git",
-					"tag": "5.0.5"
+					"tag": "5.1.0"
 				}
 			]
 		}
