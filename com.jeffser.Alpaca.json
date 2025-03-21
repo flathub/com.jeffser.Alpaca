@@ -452,7 +452,7 @@
 				{
 					"type": "git",
 					"url": "https://gitlab.gnome.org/GNOME/libspelling.git",
-					"tag": "0.4.5"
+					"tag": "0.4.7"
 				}
 			]
 		},
@@ -478,7 +478,7 @@
 				{
 					"type": "git",
 					"url": "https://github.com/Jeffser/Alpaca.git",
-					"tag": "5.2.0"
+					"tag": "5.3.0"
 				}
 			]
 		}
