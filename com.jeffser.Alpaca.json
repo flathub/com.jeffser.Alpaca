@@ -1451,8 +1451,8 @@
             "sources": [
                 {
                     "type": "git",
-		    "url": "https://github.com/Jeffser/Alpaca.git",
-		    "tag": "7.7.0"
+		    		"url": "https://github.com/Jeffser/Alpaca.git",
+		    		"tag": "7.7.1"
                 }
             ]
         }
