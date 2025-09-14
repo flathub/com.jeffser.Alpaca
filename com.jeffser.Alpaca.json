@@ -201,8 +201,8 @@
          "sources": [
             {
                "type": "file",
-               "url": "https://files.pythonhosted.org/packages/9f/57/9db810ab75133a1c87ac2e327fb59199d78d233f575fbb63bfd3492b769c/pyicu-2.15.2.tar.gz",
-               "sha256": "561e77eedff17cec6839f26211f7a5ce3c071b776e8a0ec9d1207f46cbce598f",
+               "url": "https://files.pythonhosted.org/packages/52/21/4e9b0a3ace3027fc63107fa2b5d6e66e321e104da071d787856962fbad52/PyICU-2.14.tar.gz",
+               "sha256": "acc7eb92bd5c554ed577249c6978450a4feda0aa6f01470152b3a7b382a02132",
                "x-checker-data": {
                   "type": "pypi",
                   "name": "PyICU"
