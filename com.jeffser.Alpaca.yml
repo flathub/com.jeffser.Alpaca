@@ -11,17 +11,6 @@ finish-args:
   - --socket=pulseaudio
   - --socket=wayland
   - --filesystem=/sys/module/amdgpu:ro
-  - --env=LD_LIBRARY_PATH=/app/lib:/usr/lib/x86_64-linux-gnu/GL/default/lib:/usr/lib/x86_64-linux-gnu/openh264/extra:/usr/lib/sdk/llvm15/lib:/app/plugins/lib:/app/plugins/lib/ollama:/app/plugins/lib/ollama/rocm:/app/plugins/lib/ollama/rocm/rocblas/library
-  - --env=PATH=/app/bin:/usr/bin:/app/plugins/bin
-add-extensions:
-  com.jeffser.Alpaca.Plugins:
-    merge-dirs: lib;bin
-    directory: plugins
-    no-autodownload: true
-    autodelete: true
-    subdirectories: true
-cleanup-commands:
-  - mkdir ${FLATPAK_DEST}/plugins
 cleanup:
   - /include
   - /lib/pkgconfig
@@ -40,7 +29,7 @@ modules:
         --prefix=${FLATPAK_DEST} "six" --no-build-isolation
     sources:
       - type: file
-        url: https://files.pythonhosted.org/packages/ee/ff/48bde5c0f013094d729fe4b0316ba2a24774b3ff1c52d924a8a4cb04078a/six-1.17.0-py2.py3-none-any.whl
+        url: https://files.pythonhosted.org/packages/b7/ce/149a00dd41f10bc29e5921b496af8b574d8413afcd5e30dfa0ed46c2cc5e/six-1.17.0-py2.py3-none-any.whl
         sha256: 4721f391ed90541fddacab5acf947aa0d3dc7d27b2e1e8eda2be8970586c3274
   - name: python3-requests
     buildsystem: simple
@@ -973,6 +962,15 @@ modules:
       - type: file
         url: https://files.pythonhosted.org/packages/a7/c2/fe1e52489ae3122415c51f387e221dd0773709bad6c6cdaa599e8a2c5185/urllib3-2.5.0-py3-none-any.whl
         sha256: e6b01673c0fa6a13e374b50871808eb3bf7046c4b125b216f6bf1cc604cff0dc
+  - name: python3-zstandard
+    buildsystem: simple
+    build-commands:
+      - pip3 install --verbose --exists-action=i --no-index --find-links="file://${PWD}"
+        --prefix=${FLATPAK_DEST} "zstandard" --no-build-isolation
+    sources:
+      - type: file
+        url: https://files.pythonhosted.org/packages/fd/aa/3e0508d5a5dd96529cdc5a97011299056e14c6505b678fd58938792794b1/zstandard-0.25.0.tar.gz
+        sha256: 7713e1179d162cf5c7906da876ec2ccb9c3a9dcbdffef0cc7f70c3667a205f0b
   - name: libspelling
     builddir: true
     buildsystem: meson
@@ -983,6 +981,7 @@ modules:
       - type: git
         url: https://gitlab.gnome.org/GNOME/libspelling.git
         tag: 0.4.7
+        commit: c7c74e8d402ba2e4cf48d1c57414c1c489a2361b
   - name: vte
     buildsystem: meson
     config-opts:
@@ -1003,10 +1002,12 @@ modules:
       - type: git
         url: https://github.com/flatpak/libportal.git
         tag: 0.9.1
+        commit: 8f5dc8d192f6e31dafe69e35219e3b707bde71ce
   - name: alpaca
     builddir: true
     buildsystem: meson
     sources:
       - type: git
         url: https://github.com/Jeffser/Alpaca.git
-        tag: 8.5.1
+        tag: 9.0.0
+        commit: 02fb74f8eccecf6ebb1a8df6ab08127f3304bde7
