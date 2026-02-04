@@ -1009,5 +1009,5 @@ modules:
     sources:
       - type: git
         url: https://github.com/Jeffser/Alpaca.git
-        tag: 9.0.3
-        commit: 4ffd0a9145ffa26293b4323bdcc8a955d7586ec5
+        tag: 9.0.4
+        commit: f7332f6f6eeae245257c7f1a8dbac3e658ad32d4
