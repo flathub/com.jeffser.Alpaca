@@ -1,6 +1,6 @@
 id: com.jeffser.Alpaca
 runtime: org.gnome.Platform
-runtime-version: '49'
+runtime-version: '50'
 sdk: org.gnome.Sdk
 command: alpaca
 finish-args:
@@ -1018,6 +1018,6 @@ modules:
     sources:
       - type: git
         url: https://github.com/Jeffser/Alpaca.git
-        tag: 9.2.2
-        commit: cd742d17d92d383c04b218f930fd0dd105ba1f00
+        tag: 9.2.3
+        commit: 3b91be1596cf5265d24688d304ef897153c6ef86
 
